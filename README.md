@@ -1,1 +1,1 @@
-joyboy996.github.io/AI_race_bubble
+joyboy996.github.io/AI-race-bubble
