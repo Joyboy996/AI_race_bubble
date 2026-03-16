@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edge AI – Bong Bóng AI và Bài Học Dot-com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+        .gradient-text { background: linear-gradient(to right, #1E3A8A, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .chart-container { position: relative; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; height: 350px; }
+        @media (min-width: 768px) { .chart-container { height: 450px; } }
+        .ecosystem-layer { transition: transform 0.3s ease; }
+        .ecosystem-layer:hover { transform: translateY(-5px); }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        
+        <div class="bg-slate-900 text-slate-300 p-6 rounded-xl mb-12 shadow-2xl border-l-4 border-cyan-400">
+            <h2 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Thông Tin Lưu Trữ & Xuất Bản</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div><span class="font-semibold text-cyan-400">Tiêu đề:</span> Edge AI – Bong Bóng AI và Bài Học Dot-com</div>
+                <div><span class="font-semibold text-cyan-400">Ngày báo cáo:</span> 16/03/2026</div>
+                <div><span class="font-semibold text-cyan-400">Độ dài:</span> Báo cáo chuyên sâu / Essay phân tích</div>
+                <div><span class="font-semibold text-cyan-400">Phạm vi:</span> Phân tích chu kỳ công nghệ & Chiến lược Edge AI</div>
+                <div class="md:col-span-2"><span class="font-semibold text-cyan-400">Tác giả:</span> Xuân Đi Chậm (Nguyễn Trường Xuân)</div>
+            </div>
+        </div>
+
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-900 leading-tight mb-6">
+                EDGE AI <br/>
+                <span class="gradient-text">Bong Bóng Trí Tuệ Nhân Tạo & Di Sản Dot-com</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Khi dòng vốn khổng lồ đổ vào hạ tầng và mô hình lõi, nỗi lo sợ về một bong bóng tài chính ngày càng hiện hữu. Tuy nhiên, lịch sử công nghệ chỉ ra rằng: Sự sụp đổ của bong bóng không phải là dấu chấm hết, mà là khởi đầu cho một kỷ nguyên phổ thông hóa trí tuệ nhân tạo.
+            </p>
+        </header>
+
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-12 border-t-4 border-blue-800">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">I. Lịch Sử Lặp Lại: Cơn Sốt AI và Bài Học Từ Dot-com</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-lg">
+                        Giai đoạn 2022–2026 chứng kiến AI trở thành tâm điểm tuyệt đối của thị trường công nghệ toàn cầu. Sự hội tụ của dòng vốn khổng lồ vào các startup AI, mức chi tiêu tư bản (Capex) vô tiền khoáng hậu cho trung tâm dữ liệu, và định giá tăng phi mã của hàng loạt công ty công nghệ lớn đã tạo ra một "tech boom" điển hình. 
+                    </p>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-lg">
+                        Câu hỏi lớn nhất của chu kỳ này không phải là sự hưng phấn thái quá có tồn tại hay không, mà là: <strong>Nếu bong bóng AI vỡ, điều gì sẽ còn lại?</strong>
+                    </p>
+                    <p class="text-slate-700 leading-relaxed text-lg">
+                        Nhìn lại bong bóng Dot-com (1995–2000), chỉ số NASDAQ từng tăng vọt 400% trước khi sụp đổ mất 78% giá trị. Hàng nghìn startup phá sản, nhưng Internet không chết. Di sản khổng lồ về mạng lưới cáp quang, giao thức TCP/IP, và các trung tâm máy chủ đã trở thành bệ phóng cho sự trỗi dậy của những siêu cường Internet như Amazon và Google. Bong bóng công nghệ thường phá hủy vốn tài chính, nhưng lại thanh lọc thị trường và để lại nền tảng hạ tầng vĩ đại.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <h3 class="text-center font-bold text-slate-800 mb-4">So Sánh Quỹ Đạo Chỉ Số (Mô Phỏng)</h3>
+                    <div class="chart-container">
+                        <canvas id="chartDotComVsAI"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-500 mt-4">Phân tích xu hướng tăng trưởng và điều chỉnh của hai chu kỳ công nghệ lớn (Dữ liệu chuẩn hóa cơ sở 100).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-12 border-t-4 border-cyan-500">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">II. Cơ Chế Bong Bóng & Di Sản Của Kỷ Nguyên AI</h2>
+            <p class="text-slate-700 leading-relaxed mb-8 text-lg">
+                AI được xem là một <em>General Purpose Technology</em> (Công nghệ mục đích chung) tương tự như điện hay động cơ hơi nước. Đặc thù của kỷ nguyên này là chi phí hạ tầng cực lớn. Việc huấn luyện các Frontier Model (Mô hình nền tảng thế hệ mới nhất) đòi hỏi hàng trăm triệu USD và sức mạnh tính toán (compute) hàng tỷ USD. Trong ngắn hạn, doanh thu ứng dụng thực tế khó lòng theo kịp tốc độ đốt tiền này, tạo ra khe hở định giá và hình thành bong bóng. Tuy nhiên, di sản để lại sẽ định hình lại toàn bộ nền kinh tế số.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+                        <span class="text-2xl mr-2">⚙️</span> Di Sản Phần Cứng (Hạ Tầng)
+                    </h3>
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">▪</span> <strong>Trung tâm dữ liệu:</strong> Mạng lưới Hyperscale AI Clusters.</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">▪</span> <strong>Hệ sinh thái Chip:</strong> GPU, NPU, TPU và công nghệ đóng gói tiên tiến (CoWoS, HBM).</li>
+                        <li class="flex items-start"><span class="text-cyan-600 mr-2">▪</span> <strong>Năng lượng & Mạng:</strong> Lưới điện năng lượng tái tạo, hạt nhân và công nghệ quang học tốc độ cao (NVLink, InfiniBand).</li>
+                    </ul>
+                </div>
+                <div class="bg-cyan-50 rounded-xl p-6 border border-cyan-100">
+                    <h3 class="text-xl font-bold text-blue-900 mb-4 flex items-center">
+                        <span class="text-2xl mr-2">💾</span> Di Sản Phần Mềm (Mô Hình)
+                    </h3>
+                    <ul class="space-y-3 text-slate-700">
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">▪</span> <strong>Frontier Models:</strong> GPT-4, Claude, Gemini, LLaMA đạt đến mức độ trưởng thành.</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">▪</span> <strong>Quy trình dữ liệu:</strong> Phương pháp tạo dữ liệu tổng hợp (synthetic data), alignment và evaluation.</li>
+                        <li class="flex items-start"><span class="text-blue-600 mr-2">▪</span> <strong>Student Models:</strong> Các mô hình nhỏ gọn, rẻ và nhanh nhờ chưng cất tri thức.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 p-6 rounded-xl">
+                <h3 class="text-center font-bold text-white mb-6">Quá Trình "Chưng Cất" Tri Thức Từ Đám Mây Xuống Thiết Bị</h3>
+                
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="bg-blue-800 text-white p-4 rounded-lg text-center w-full md:w-64 border border-blue-600 shadow-lg">
+                        <div class="font-bold text-lg mb-1">Frontier Model</div>
+                        <div class="text-xs text-blue-200">Hàng nghìn tỷ tham số<br/>Chạy trên Cloud Cluster</div>
+                    </div>
+                    
+                    <div class="text-cyan-400 text-3xl font-bold hidden md:block">→</div>
+                    <div class="text-cyan-400 text-3xl font-bold md:hidden">↓</div>
+                    
+                    <div class="bg-slate-800 text-white p-4 rounded-lg text-center w-full md:w-64 border border-cyan-500 shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
+                        <div class="font-bold text-md mb-1 text-cyan-300">Knowledge Distillation</div>
+                        <div class="text-xs text-slate-400">Quantization, Pruning, LoRA<br/>Tối ưu hóa suy luận</div>
+                    </div>
+
+                    <div class="text-cyan-400 text-3xl font-bold hidden md:block">→</div>
+                    <div class="text-cyan-400 text-3xl font-bold md:hidden">↓</div>
+
+                    <div class="bg-teal-800 text-white p-4 rounded-lg text-center w-full md:w-64 border border-teal-500 shadow-lg">
+                        <div class="font-bold text-lg mb-1">Student Model (Edge)</div>
+                        <div class="text-xs text-teal-200">Nhỏ gọn, Rẻ, Nhanh<br/>Chạy trực tiếp trên thiết bị</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-12 border-t-4 border-teal-500">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">III. Sự Chuyển Pha Công Nghiệp: Kỷ Nguyên Của Edge AI</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="order-2 lg:order-1">
+                    <div class="chart-container">
+                        <canvas id="chartCloudVsEdge"></canvas>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <p class="text-slate-700 leading-relaxed mb-4 text-lg">
+                        Sau giai đoạn phát triển bùng nổ của Layer 1 (Frontier AI tập trung vào nghiên cứu và huấn luyện trên đám mây), thị trường sẽ chứng kiến sự chuyển dịch trọng tâm khổng lồ sang Layer 2: <strong>Edge AI (Triết lý phổ thông hóa AI)</strong>. 
+                    </p>
+                    <p class="text-slate-700 leading-relaxed mb-4 text-lg">
+                        Edge AI là sự dịch chuyển năng lực xử lý trí tuệ nhân tạo trực tiếp xuống các thiết bị đầu cuối—từ điện thoại, máy tính xách tay, camera an ninh, cho đến xe tự lái và robot công nghiệp—mà không cần liên tục phụ thuộc vào Cloud.
+                    </p>
+                    <div class="bg-teal-50 border-l-4 border-teal-500 p-4 rounded-r-lg mt-6">
+                        <h4 class="font-bold text-teal-900 mb-2">Vì sao Edge AI sẽ thống trị mặt trận ứng dụng?</h4>
+                        <ul class="space-y-2 text-sm text-teal-800">
+                            <li><strong>⚡ Độ trễ cực thấp (Low Latency):</strong> Xử lý thời gian thực, thiết yếu cho xe tự lái, robot.</li>
+                            <li><strong>🔒 Bảo mật tuyệt đối (Privacy):</strong> Dữ liệu nhạy cảm không bao giờ rời khỏi thiết bị cá nhân.</li>
+                            <li><strong>💰 Chi phí suy luận giảm (Low Cost):</strong> Tiết kiệm hàng tỷ USD tiền thuê máy chủ Cloud cho các tác vụ hàng ngày.</li>
+                            <li><strong>🌐 Khả năng ngoại tuyến (Offline):</strong> Đảm bảo hệ thống vận hành liên tục ngay cả khi mất kết nối mạng lưới.</li>
+                            <li><strong>👤 Tính cá nhân hóa:</strong> Trí tuệ nhân tạo tự học và tinh chỉnh theo thói quen của người dùng độc bản.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-2xl shadow-lg p-8 mb-12 border-t-4 border-purple-600">
+            <h2 class="text-3xl font-bold text-blue-900 mb-6">IV. AI Mặc Định & Cấu Trúc Quyền Lực Mới</h2>
+            <p class="text-slate-700 leading-relaxed mb-8 text-lg text-center max-w-4xl mx-auto">
+                Ba mươi năm trước, điện thoại di động là biểu tượng của sự xa xỉ. Ngày nay, smartphone là tiêu chuẩn cơ bản của nhân loại. Trí tuệ nhân tạo đang đi theo chính xác quỹ đạo đó. Tương lai hậu bong bóng sẽ chứng kiến AI trở thành hệ điều hành vô hình được nhúng mặc định vào mọi thiết bị vật lý.
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                <div class="bg-purple-50 p-6 rounded-xl text-center border border-purple-100 shadow-sm ecosystem-layer">
+                    <div class="text-4xl mb-3 text-purple-600">📱</div>
+                    <div class="font-bold text-purple-900 mb-1">Điện Tử Tiêu Dùng</div>
+                    <div class="text-xs text-purple-700">Smartphone, PC, Kính thông minh</div>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl text-center border border-purple-100 shadow-sm ecosystem-layer">
+                    <div class="text-4xl mb-3 text-purple-600">📡</div>
+                    <div class="font-bold text-purple-900 mb-1">Viễn Thông & Mạng</div>
+                    <div class="text-xs text-purple-700">Bộ định tuyến, Hạ tầng mạng</div>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl text-center border border-purple-100 shadow-sm ecosystem-layer">
+                    <div class="text-4xl mb-3 text-purple-600">🏭</div>
+                    <div class="font-bold text-purple-900 mb-1">Công Nghiệp Nhấn</div>
+                    <div class="text-xs text-purple-700">Robot, Bảo trì dự đoán, Tự động hóa</div>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl text-center border border-purple-100 shadow-sm ecosystem-layer">
+                    <div class="text-4xl mb-3 text-purple-600">🎯</div>
+                    <div class="font-bold text-purple-900 mb-1">An Ninh Quốc Phòng</div>
+                    <div class="text-xs text-purple-700">Drone, Hệ thống tự hành, Radar</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center bg-slate-50 p-8 rounded-xl border border-slate-200">
+                <div>
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">Cuộc Chiến Hệ Sinh Thái & Chủ Quyền Số</h3>
+                    <p class="text-slate-600 mb-4 text-justify">
+                        Sự phát triển của Edge AI làm nảy sinh các cấu trúc quyền lực mới, phân hóa thành các hệ sinh thái cạnh tranh khốc liệt. Cuộc chiến không đơn thuần nằm ở việc ai sở hữu mô hình thông minh nhất, mà là ai kiểm soát được toàn bộ chuỗi giá trị: từ Chip, Cloud, Models, Dữ liệu đến Nhân tài.
+                    </p>
+                    <p class="text-slate-600 text-justify">
+                        Khái niệm <strong>Chủ quyền số (Digital Sovereignty)</strong> sẽ được định nghĩa lại. Các quốc gia sẽ khắt khe hơn trong việc kiểm soát dữ liệu nằm trong biên giới, nắm giữ chủ quyền về năng lực tính toán (Compute Sovereignty) và đảm bảo năng lực suy luận nội địa để phục vụ an ninh quốc gia.
+                    </p>
+                </div>
+                <div class="space-y-3 relative">
+                    <div class="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-900 via-cyan-500 to-teal-400"></div>
+                    <div class="bg-white p-4 rounded shadow border border-slate-100 pl-6 relative">
+                        <div class="font-bold text-blue-900">Layer 1: Core (Tầng Lõi)</div>
+                        <div class="text-sm text-slate-500">Frontier Models siêu lớn (Chức năng tạo tri thức mới).</div>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow border border-slate-100 pl-6 relative">
+                        <div class="font-bold text-cyan-700">Layer 2: Distribution (Tầng Phân Phối)</div>
+                        <div class="text-sm text-slate-500">Student Models được tinh chỉnh, các frameworks mã nguồn mở.</div>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow border border-slate-100 pl-6 relative">
+                        <div class="font-bold text-teal-600">Layer 3: Device (Tầng Thiết Bị)</div>
+                        <div class="text-sm text-slate-500">Edge AI hoạt động trực tiếp trên hàng tỷ thiết bị phần cứng.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-slate-900 text-slate-300 rounded-2xl shadow-xl p-8 lg:p-12 text-center">
+            <h2 class="text-3xl font-extrabold text-white mb-6">V. Tổng Kết: Tương Lai Hậu Bong Bóng</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 text-left">
+                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-red-400 font-bold mb-2">Ngộ nhận #1</h3>
+                    <p class="text-sm">"Bong bóng AI vỡ nghĩa là AI thất bại."<br/><span class="text-white font-semibold mt-2 inline-block">Thực tế:</span> Nó thanh lọc thị trường, để lại hạ tầng khổng lồ làm nền tảng cho sự phát triển bền vững.</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-red-400 font-bold mb-2">Ngộ nhận #2</h3>
+                    <p class="text-sm">"Edge AI sẽ tiêu diệt hoàn toàn Cloud AI."<br/><span class="text-white font-semibold mt-2 inline-block">Thực tế:</span> Tương lai là Hybrid AI. Cloud xử lý tác vụ nặng, Edge xử lý thời gian thực.</p>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-lg border border-slate-700">
+                    <h3 class="text-red-400 font-bold mb-2">Ngộ nhận #3</h3>
+                    <p class="text-sm">"Frontier models nắm giữ toàn bộ giá trị kinh tế."<br/><span class="text-white font-semibold mt-2 inline-block">Thực tế:</span> Lợi nhuận khổng lồ nhất sẽ nằm ở năng lực triển khai công nghiệp (Industrial Deployment).</p>
+                </div>
+            </div>
+            <p class="text-xl md:text-2xl text-cyan-400 font-light italic mt-8 max-w-4xl mx-auto leading-relaxed">
+                "Nếu bong bóng AI sụp đổ, AI sẽ không biến mất. Nó chỉ chuyển pha từ quá trình tạo dựng tri thức trên các đám mây khổng lồ, sang quá trình phổ thông hóa trí tuệ vào từng tế bào của nền kinh tế. Kỷ nguyên của Edge AI chính thức bắt đầu."
+            </p>
+        </section>
+        
+        <footer class="mt-12 text-center text-slate-400 text-sm">
+            <p>© 2026 - Bản quyền tài liệu thuộc về tác giả Nguyễn Trường Xuân. Dữ liệu mô phỏng phục vụ mục đích phân tích học thuật.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const wrapLabel = (label) => {
+            if (typeof label !== 'string' || label.length <= 16) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (let i = 0; i < words.length; i++) {
+                if ((currentLine + words[i]).length > 16) {
+                    if (currentLine.length > 0) lines.push(currentLine.trim());
+                    currentLine = words[i] + ' ';
+                } else {
+                    currentLine += words[i] + ' ';
+                }
+            }
+            if (currentLine.trim().length > 0) lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const commonTooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    labels: { color: '#334155', font: { family: "'Inter', sans-serif" } }
+                }
+            },
+            maintainAspectRatio: false,
+            responsive: true
+        };
+
+        const ctxDotCom = document.getElementById('chartDotComVsAI').getContext('2d');
+        const rawLabelsDotCom = ['Năm 1', 'Năm 2', 'Năm 3', 'Năm 4', 'Năm 5 (Đỉnh Bubble)', 'Năm 6', 'Năm 7 (Đáy)'];
+        new Chart(ctxDotCom, {
+            type: 'line',
+            data: {
+                labels: rawLabelsDotCom.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'NASDAQ Dot-com (1995-2002)',
+                        data: [100, 140, 190, 280, 480, 220, 105],
+                        borderColor: '#94A3B8',
+                        backgroundColor: 'rgba(148, 163, 184, 0.2)',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'AI Boom Trajectory (Ước lượng)',
+                        data: [100, 160, 250, 420, 500, null, null],
+                        borderColor: '#06B6D4',
+                        backgroundColor: 'rgba(6, 182, 212, 0.2)',
+                        borderWidth: 3,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#1E3A8A'
+                    }
+                ]
+            },
+            options: {
+                ...commonTooltipConfig,
+                scales: {
+                    y: { 
+                        beginAtZero: true, 
+                        grid: { color: '#E2E8F0' },
+                        ticks: { color: '#64748B' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#64748B' }
+                    }
+                }
+            }
+        });
+
+        const ctxRadar = document.getElementById('chartCloudVsEdge').getContext('2d');
+        const rawRadarLabels = ['Tốc độ phản hồi (Độ trễ thấp)', 'Bảo mật quyền riêng tư', 'Tiết kiệm chi phí suy luận', 'Khả năng vận hành ngoại tuyến', 'Mức độ cá nhân hóa thiết bị'];
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: rawRadarLabels.map(wrapLabel),
+                datasets: [
+                    {
+                        label: 'Frontier AI (Cloud)',
+                        data: [3, 2, 2, 1, 6],
+                        backgroundColor: 'rgba(30, 58, 138, 0.2)',
+                        borderColor: '#1E3A8A',
+                        pointBackgroundColor: '#1E3A8A',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Edge AI (Device)',
+                        data: [9, 10, 8, 9, 9],
+                        backgroundColor: 'rgba(20, 184, 166, 0.4)',
+                        borderColor: '#14B8A6',
+                        pointBackgroundColor: '#14B8A6',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                ...commonTooltipConfig,
+                scales: {
+                    r: {
+                        angleLines: { color: '#E2E8F0' },
+                        grid: { color: '#E2E8F0' },
+                        pointLabels: {
+                            font: { family: "'Inter', sans-serif", size: 11 },
+                            color: '#475569'
+                        },
+                        ticks: { display: false, min: 0, max: 10 }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
